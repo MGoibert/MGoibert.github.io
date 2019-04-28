@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Research
-permalink: /reseach/
+permalink: /research/
 ---
 
 Here, put some research topics
