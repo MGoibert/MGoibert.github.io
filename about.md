@@ -4,20 +4,21 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
 Welcome to my blog!
 
 I am a French researcher in Applied Mathematics and more specifically in Machine Learning. I am currently completing a Master degree in [ENSAE](https://www.ensae.fr "ENSAE homepage") and [ESSEC](http://www.essec.edu/fr/ "ESSEC Homepage"), and doing an internship in [Criteo](https://www.criteo.com "Criteo homepage"), under the supervision of [Elvis Dohmatob](http://dohmatob.github.io "Elvis's personal page").
 
-I am intresting in different topic, including:
+I am intresting in different topics, including:
 
-- Machine Learning and Deep Learning: mathematical aspects, adversarial robustness.
+- Machine Learning and Deep Learning: learning theory.
+- Optimization under uncertainty: adversarial robustness.
 - Probability theory and stochastic proccesses.
 - Optimal transportation.
 
+### More information
+
+You can find more information about my academic records and my professional experiences in [the CV page](/cv.md)
+
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[My email adress](mailto:morgane.goibert@gmail.com)
