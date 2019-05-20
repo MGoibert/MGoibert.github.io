@@ -4,12 +4,8 @@ title: CV
 permalink: /cv/
 ---
 
-New page for CV
+Not available for now.
+===
 
-### More Information
-
-Blablabla
-
-### Contact me
-
-### [email@domain.com](mailto:email@domain.com)
+You can download my cv in French here, or in english here.
+Coming soon.
