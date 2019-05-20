@@ -17,7 +17,7 @@ I am intresting in different topics, including:
 
 ### More information
 
-You can find more information about my academic records and my professional experiences in [the CV page](/cv.md)
+You can find more information about my academic records and my professional experiences in [the CV page](/cv.md).
 
 ### Contact me
 
