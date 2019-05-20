@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Research
-permalink: /research/
+title: CV
+permalink: /cv/
 ---
 
-Here, put some research topics
+New page for CV
 
 ### More Information
 
