@@ -15,5 +15,5 @@ The easiest way to make your first post is to edit this one. Go into /_posts/ an
 
 A big test - version 5 !
 <figure class="video_container">
-  <iframe src="../downloads/graph_test1.html" frameborder="0" width="900" height="900"> </iframe>
+  <iframe src="../downloads/graph_test1.html" frameborder="0" width="700" height="600"> </iframe>
 </figure>
