@@ -5,6 +5,9 @@ title: You're up and running!
 
 An update to see how it's working. Date changed
 
+Here is a doc to test how downloading works: [the file][1]
+[1]:{{ site.url }}/downloads/test.jpg
+
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
