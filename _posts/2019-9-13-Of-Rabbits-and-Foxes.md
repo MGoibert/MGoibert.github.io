@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Of Rabbits and Foxes, the Lotka Volterra model
+title: Of Rabbits and Foxes
 ---
 
-### Brief motivation
+## Brief motivation
 
 Among the different domains of Maths I've come across so far, one that made a lasting impression on me is the dynamic of populations, with the prey-predator model of Lotka-Volterra.
 
 Why is so ? Because this model, somehow quite simple, allow us to play with some interesting and beautiful mathematical concepts while being applied to a funny situation. Simplicity, elegance, enjoyment; what more a mathematician could ask for ?
 
-### The idea
+## The Lotka-Volterra model
 
 The goal of the Lotka-Volterra model is to represent the evolution through time of two populations: the preys (rabbits) and the predators (foxes). To do so, it introduce a very simple system of equations that can be either deterministic or stochastic, but in both cases it is working the same way.
 
@@ -77,7 +77,7 @@ $$\left\{
 
 Now that we have our model described, we would like to simulate it. The Gillespie algorithm is designed to deal with problems like ours, so that's what we will use. Before we do so, in the next paragraph, I'll try to illustrate why and how this algorithm works.
 
-$(X(t), Y(t))$ is a continuous Markov chain with a countable state space I. We can have a closer look to the transition rate matrix of this chain, an object which will help us describe when a the system will change from one state to another. This matrix $Q = (q_{i,j \in I}$ satisfies:
+$(X(t), Y(t))$ is a continuous Markov chain with a countable state space I. We can have a closer look to the transition rate matrix of this chain, an object which will help us describe when a the system will change from one state to another. This matrix $Q = (q_{i,j) \in I}$ satisfies:
 
 - $\forall \; i \neq j, q_{i,j}$ is the speed at which the system changes from state $i$ to state $j$
 - $\forall \; i \in I, q_{i,i} = - \sum_{j \neq i} q_{i,j}$
@@ -89,13 +89,18 @@ Thanks to that, we thus know when the next jump / change of state will occur, gi
 And we are done! This was all the point of the Gillespie algorithm, that we can sum up like this:
 
 - 1) Initialise your problem: $t=0, x(0) = x, y(0) = y$
-- 2) Compute your transition rates: $q_1 = \alpha x, q_2 = \beta x y, \q_3 = \gamma y$ and $q = q_1 + q_2 + q_3$
+- 2) Compute your transition rates: $q_1 = \alpha x, q_2 = \beta x y, q_3 = \gamma y$ and $q = q_1 + q_2 + q_3$
 - 3) Simulate whan the next event will occur: $s \sim \mathcal{E}(q)$ and $t \leftarrow t + s$
-- 4) Simulate which event will occur: $\mathbb{P}(\text{event} i) = q_i / q$
-- 5) Change your number of preys and predators accordingly: if $i = 1, x \leftarrow x + 1 ;$ if $i = 2, x \leftarrow x-1$ and $y \leftarrow y+1 ; $ and $if i = 3, y \leftarrow y-1$
+- 4) Simulate which event will occur: $\mathbb{P}(\text{event } i) = q_i / q$
+- 5) Change your number of preys and predators accordingly: if $i = 1, x \leftarrow x + 1 ;$ if $i = 2, x \leftarrow x-1$ and $y \leftarrow y+1 ; $ and if $i = 3, y \leftarrow y-1$
 - 6) Repeat from step 2)
 
-We can do it the good old way: coding entirely this small algorithm. You can find it just below, along with the plot of what we obtain for one simulation.
+We can do it the good old way: coding entirely this small algorithm. You can find it just below, along with the plot of what we obtain for one simulation.  
 
+  
+
+
+
+The stochastic approach of this Lotka-Volterra model just scratches the surface of the all the maths behind the continous time Markov chains, which are pretty nice. The advantage of that is you can understand the prey and predators dynamic without digging too much into maths theory, and with a rather short algorithm, simulate the model. But as the theory about Markov chains really worth it, I hope this brief overview of the subject piqued your curiosity, like it did for me.
 
 
