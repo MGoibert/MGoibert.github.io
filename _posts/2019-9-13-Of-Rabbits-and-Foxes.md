@@ -2,13 +2,18 @@
 layout: post
 title: Of Rabbits and Foxes
 ---
-  
+
+A quick overview of the Lotka-Volterra model.
+
+<br/>
 
 ## Brief motivation
 
 Among the different domains of Maths I've come across so far, one that made a lasting impression on me is the dynamic of populations, with the prey-predator model of Lotka-Volterra.
 
 Why is so ? Because this model, somehow quite simple, allow us to play with some interesting and beautiful mathematical concepts while being applied to a funny situation. Simplicity, elegance, enjoyment; what more a mathematician could ask for ?
+
+<br/>
 
 ## The Lotka-Volterra model
 
@@ -23,7 +28,7 @@ In the end, the system describing the evolution of preys and preddators is quite
 
 $$\left\{
 \begin{array}{r c l}
-x'(t) &=& \alpha x(t) - \beta x(t) y(t) \\
+x'(t) &=& \alpha x(t) - \beta \, x(t) \, y(t) \\
 y'(t) &=& \beta x(t) y(t) - \gamma y(t)
 \end{array}
 \right. $$
@@ -66,7 +71,8 @@ With the parameters we've chosen ($\alpha = 0.15, \beta = 0.04, \gamma = 0.3$), 
 
 
   
-
+<br/>
+<br/>
 
 ### Stochastic approach
 
@@ -167,7 +173,9 @@ ggplot(out, aes(x = Time)) + geom_line(aes(y=Predator, colour="Foxes"), linetype
   
 
   
-  
+<br/>
+<br/>
+<br/>
 
 The stochastic approach of this Lotka-Volterra model just scratches the surface of the all the maths behind the continous time Markov chains, which are pretty nice. The advantage of that is you can understand the prey and predators dynamic without digging too much into maths theory, and with a rather short algorithm, simulate the model. But as the theory about Markov chains really worth it, I hope this brief overview of the subject piqued your curiosity, like it did for me.
 
