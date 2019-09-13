@@ -18,6 +18,9 @@ Maths 2:
 
 $$k_{n+1} = n^2 + k_n^2 - k_{n-1}$$
 
+{% highlight python %}
+x = ('a', 1, False)
+{% endhighlight %}
 
 <figure class="video_container">
   <iframe src="../downloads/graph_test1.html" frameborder="0" width="725" height="500"> </iframe>
