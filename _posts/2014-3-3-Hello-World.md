@@ -14,7 +14,11 @@ Next you can update your site name, avatar and other options using the _config.y
 The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
 
 A big test - version 5 !
-Maths: $$k_{n+1} = n^2 + k_n^2 - k_{n-1}$$
+Maths 2: 
+
+$$k_{n+1} = n^2 + k_n^2 - k_{n-1}$$
+
+
 <figure class="video_container">
   <iframe src="../downloads/graph_test1.html" frameborder="0" width="725" height="500"> </iframe>
 </figure>
