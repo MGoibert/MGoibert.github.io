@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Of Rabbits and Foxes: the Lotka-Volterra model
+title: Of Rabbits and Foxes, the Lotka Volterra model
 ---
 
 ### Brief motivation
