@@ -4,9 +4,9 @@
   padding: 7px 7px 7px 10px;
   border: 1px solid #ddd;
   margin: 20px 0 20px 0;
+  max-height: 100px;
+  overflow-y: scroll;
   overflow: scroll;
-  max-height: 300px;
-  overflow-y: auto;
 }
 
 code {
