@@ -79,10 +79,10 @@ With the parameters we've chosen ($\alpha = 0.15, \beta = 0.04, \gamma = 0.3$), 
 The stochastic approach is funnier (well at least for me). In this set up, the three possible actions we had (prey reproduction, predator death or predator eating prey) are converted into probable actions. We thus have:
 
 $$\left\{
-\begin{array}{r c l}
-\mathbb{P}(X(t+dt) = x+1; Y(t+dt)=y | X(t)=x; Y(t)=y &=& \alpha x \text{d}t = q_1 \text{d}t \\
-\mathbb{P}(X(t+dt) = x-1; Y(t+dt)=y+1 | X(t)=x; Y(t)=y &=& \beta x y \text{d}t = q_2 \text{d}t \\
-\mathbb{P}(X(t+dt) = x; Y(t+dt)=y-1 | X(t)=x; Y(t)=y &=& \gamma y \text{d}t = q_3 \text{d}t
+\begin{array}{l c l}
+\mathbb{P}(X(t+dt) = x+1; Y(t+dt)=y | X(t)=x; Y(t)=y &=& \alpha \, x \, \text{d}t = q_1 \, \text{d}t \\
+\mathbb{P}(X(t+dt) = x-1; Y(t+dt)=y+1 | X(t)=x; Y(t)=y &=& \beta x \, \, y \, \text{d}t = q_2 \, \text{d}t \\
+\mathbb{P}(X(t+dt) = x; Y(t+dt)=y-1 | X(t)=x; Y(t)=y &=& \gamma \, y \, \text{d}t = q_3 \, \text{d}t
 \end{array}
 \right. $$
 
@@ -93,14 +93,14 @@ $(X(t), Y(t))$ is a continuous Markov chain with a countable state space I. We c
 - $\forall \; i \neq j, q_{i,j}$ is the speed at which the system changes from state $i$ to state $j$
 - $\forall \; i \in I, q_{i,i} = - \sum_{j \neq i} q_{i,j}$
 
-In our case, from a fixed state (x, y), we can only access three different states: (x+1, y), (x-1, y+1) or (x, y-1) with repectively $q_1, q_2$ and $q_3$ as transition rate. What is nice with this matrix is that a well-known property of continuous time Markov chains states that the holding time in the state $i$ until the next jump, noted $S_{i}$ follows an exponential law of parameter $-q_{i,i} = q_1 + q_2 + q_3$.
+In our case, from a fixed state $(x, y)$, we can only access three different states: $(x+1, y)$, $(x-1, y+1)$ or $(x, y-1)$ with repectively $q_1, q_2$ and $q_3$ as transition rate. What is nice with this matrix is that a well-known property of continuous time Markov chains states that the holding time in the state $i$ until the next jump, noted $S_{i}$ follows an exponential law of parameter $-q_{i,i} = q_1 + q_2 + q_3$.
 
 Thanks to that, we thus know when the next jump / change of state will occur, given the state $i$ we are in. We just have to know which event will take place: prey reproduction, predator reproduction or predator death. This is quite easy: event $j$ will occur with probability $\frac{q_{i,j}}{q_1 + q_2 + q_3}$. So for example, the prey reproduction event occur with probability $\frac{q_1}{q_1 + q_2 + q_3}$.
 
 And we are done! This was all the point of the Gillespie algorithm, that we can sum up like this:
 
-- 1) Initialise your problem: $t=0, x(0) = x, y(0) = y$
-- 2) Compute your transition rates: $q_1 = \alpha x, q_2 = \beta x y, q_3 = \gamma y$ and $q = q_1 + q_2 + q_3$
+- 1) Initialise your problem: $t=0, \, x(0) = x, \, y(0) = y$
+- 2) Compute your transition rates: $q_1 = \alpha x, \, q_2 = \beta x y, \, q_3 = \gamma y$ and $q = q_1 + q_2 + q_3$
 - 3) Simulate whan the next event will occur: $s \sim \mathcal{E}(q)$ and $t \leftarrow t + s$
 - 4) Simulate which event will occur: $\mathbb{P}(\text{event } i) = q_i / q$
 - 5) Change your number of preys and predators accordingly: if $i = 1, x \leftarrow x + 1 ;$ if $i = 2, x \leftarrow x-1$ and $y \leftarrow y+1 ; $ and if $i = 3, y \leftarrow y-1$

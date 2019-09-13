@@ -5,6 +5,8 @@
   border: 1px solid #ddd;
   margin: 20px 0 20px 0;
   overflow: scroll;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 code {
