@@ -164,11 +164,10 @@ ggplot(out, aes(x = Time)) + geom_line(aes(y=Predator, colour="Foxes"), linetype
 {% endhighlight %}
 
 ![_config.yml]({{ site.baseurl }}/images/lotka_volterra2.png)
-
-
   
 
-
+  
+  
 
 The stochastic approach of this Lotka-Volterra model just scratches the surface of the all the maths behind the continous time Markov chains, which are pretty nice. The advantage of that is you can understand the prey and predators dynamic without digging too much into maths theory, and with a rather short algorithm, simulate the model. But as the theory about Markov chains really worth it, I hope this brief overview of the subject piqued your curiosity, like it did for me.
 
