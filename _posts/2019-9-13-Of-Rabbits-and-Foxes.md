@@ -2,6 +2,7 @@
 layout: post
 title: Of Rabbits and Foxes
 ---
+  
 
 ## Brief motivation
 
@@ -59,8 +60,12 @@ ggplot(data = data, aes(x=time)) + geom_line(aes(y=Predator, colour= "Foxes"), l
 {% endhighlight %}
 
 With the parameters we've chosen ($\alpha = 0.15, \beta = 0.04, \gamma = 0.3$), we obtain the following evolution:
+
+
 ![_config.yml]({{ site.baseurl }}/images/lotka_volterra1.png)
 
+
+  
 
 
 ### Stochastic approach
@@ -96,6 +101,70 @@ And we are done! This was all the point of the Gillespie algorithm, that we can 
 - 6) Repeat from step 2)
 
 We can do it the good old way: coding entirely this small algorithm. You can find it just below, along with the plot of what we obtain for one simulation.  
+
+{% highlight r %}
+library(reshape2)
+library(ggplot2)
+
+# Initialization
+param <- c(0.5, 0.003, 0.3)
+x0 <- 80
+y0 <- 70
+t_max <- 150
+x <- x0
+y <- y0
+
+# Function to simulate the problem
+simu_x_y <- function(param,x,y,t_max){
+  t <- 0
+  Prey <- c(x)
+  Predator <- c(y)
+  Time <- c(0)
+  i <- 2
+  
+    while(t <= t_max){
+      q1 <- param[1]*x
+      q2 <- param[2]*x*y
+      q3 <- param[3]*y
+      q <- q1 + q2 + q3
+        
+      s <- rexp(1, rate = q)*(q >0)
+      if (q==0){break}
+
+      q_sort = sort(c(q1,q2,q3))
+      q_order <- order(c(q1,q2,q3))
+      u <- runif(1, min=0, max=1)
+      if (u<q_sort[1]/q){r <- as.name(paste0("q", q_order[1]))}
+      if (u>=q_sort[1]/q & u<(q_sort[1] + q_sort[2])/q){r <- as.name(paste0("q", q_order[2]))}
+      if (u >= (q_sort[1] + q_sort[2])/q) {r <- as.name(paste0("q", q_order[3]))}
+    
+      if (r == "q1" & x > 0){x <- x + 1}
+      else if(r=="q1" & x == 0){x = 0}
+      if (r == "q2" & x > 0 & y > 0){
+      x <- x - 1
+      y <- y + 1
+      }else if( (r=="q2" & x == 0) | (r=="q2" & y == 0) ){x = 0
+      y = 0}
+      if (r == "q3" & y > 0){y <- y - 1}else if(r=="q3" & y == 0){y = 0}
+    
+      Prey[i] <- x
+      Predator[i] <- y
+      Time[i] <- t
+      i <- i+1
+      t <- t + s
+    }
+    return(data.frame(Time, Prey, Predator))
+  }
+
+out <- simu_x_y(param, x0, y0, t_max)
+ggplot(out, aes(x = Time)) + geom_line(aes(y=Predator, colour="Foxes"), linetype="longdash", lwd=0.5) +
+  geom_line(aes(y=Prey, colour="Rabbits"), lwd=0.5) + ggtitle("Lotka-Volterra model - stochastic") +
+  scale_colour_manual("Legend", breaks = c("Foxes", "Rabbits"), values = c("#F8766D", "#00BFC4")) + ylab("Population") +
+  theme(legend.position = c(0.93,0.93))
+{% endhighlight %}
+
+![_config.yml]({{ site.baseurl }}/images/lotka_volterra2.png)
+
 
   
 
