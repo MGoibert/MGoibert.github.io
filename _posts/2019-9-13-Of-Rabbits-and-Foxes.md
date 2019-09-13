@@ -80,9 +80,9 @@ The stochastic approach is funnier (well at least for me). In this set up, the t
 
 $$\left\{
 \begin{array}{l c l}
-\mathbb{P}(X(t+dt) = x+1; Y(t+dt)=y | X(t)=x; Y(t)=y &=& \alpha \, x \, \text{d}t = q_1 \, \text{d}t \\
-\mathbb{P}(X(t+dt) = x-1; Y(t+dt)=y+1 | X(t)=x; Y(t)=y &=& \beta x \, \, y \, \text{d}t = q_2 \, \text{d}t \\
-\mathbb{P}(X(t+dt) = x; Y(t+dt)=y-1 | X(t)=x; Y(t)=y &=& \gamma \, y \, \text{d}t = q_3 \, \text{d}t
+\mathbb{P}(X(t+dt) = x+1; Y(t+dt)=y | X(t)=x; Y(t)=y) &=& \alpha \, x \, \text{d}t = q_1 \, \text{d}t \\
+\mathbb{P}(X(t+dt) = x-1; Y(t+dt)=y+1 | X(t)=x; Y(t)=y) &=& \beta x \, \, y \, \text{d}t = q_2 \, \text{d}t \\
+\mathbb{P}(X(t+dt) = x; Y(t+dt)=y-1 | X(t)=x; Y(t)=y) &=& \gamma \, y \, \text{d}t = q_3 \, \text{d}t
 \end{array}
 \right. $$
 
