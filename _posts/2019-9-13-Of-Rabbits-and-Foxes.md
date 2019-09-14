@@ -117,8 +117,6 @@ param <- c(0.5, 0.003, 0.3)
 x0 <- 80
 y0 <- 70
 t_max <- 150
-x <- x0
-y <- y0
 
 # Function to simulate the problem
 simu_x_y <- function(param,x,y,t_max){
