@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-I am currently working as an intern at [Criteo](https://www.criteo.com "Criteo homepage"){:target="_blank"}.
+I am currently a PhD student at [Télécom ParisTech](https://www.telecom-paris.fr "Télécom homepage"){:target="_blank"} and [Criteo](https://www.criteo.com "Criteo homepage"){:target="_blank"}.
 My work focuses on the theoretical aspects of Deep Learning, and more specifically on Adversarial Robustness. You can find a nice introduction/tutorial on the subject [here](https://adversarial-ml-tutorial.org "Adversarial robustness tutorial"){:target="_blank"}.
 
 More information on my work is coming soon ;)
