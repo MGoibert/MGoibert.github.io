@@ -37,7 +37,7 @@ There are few explicit solutions to this system: if at some point in time, there
 If this time there are no more predators i.e. $y(t) = 0$, then the preys strive: $x(t) = x(0) \text{e}^{\alpha t}$.
 A more interesting situation is when, at $t = t_0, x(t_0) = \gamma / \beta$ and $y(t_0) = \alpha / \beta$, then the system stays stable so that the number of preys and predators remains constant.
 
-But now, let's simulate all that! Hopefully, librairies solving ordinary differential equations do exists, so we do not need to code everything. In R, which I will use here, the deSolve librairy does a pretty good job. We just have to create the function containing our ODEs, choose the parameter values and the initial number of preys and preddators and we are done.
+But now, let's simulate all that! Hopefully, libraries solving ordinary differential equations do exist, so we do not need to code everything. In R, which I will use here, the deSolve library does a pretty good job. We just have to create the function containing our ODEs, choose the parameter values and the initial number of preys and preddators and we are done.
 
 {% highlight r %}
 library(deSolve)
@@ -51,7 +51,7 @@ LV <- function(Time, State, Pars) {
   })
 }
 
-pars  <- c(beta = 0.04, alpha  = 0.15, gamma  = 0.3)
+pars  <- c(alpha  = 0.15, beta = 0.04, gamma  = 0.3)
 
 ini  <- c(Prey = 10, Predator = 10)
 times <- seq(0, 200, by = 1)
@@ -80,20 +80,20 @@ The stochastic approach is funnier (well at least for me). In this set up, the t
 
 $$\left\{
 \begin{array}{l c l}
-\mathbb{P}(X(t+dt) = x+1; Y(t+dt)=y | X(t)=x; Y(t)=y) &=& \alpha \, x \, \text{d}t = q_1 \, \text{d}t \\
-\mathbb{P}(X(t+dt) = x-1; Y(t+dt)=y+1 | X(t)=x; Y(t)=y) &=& \beta x \, \, y \, \text{d}t = q_2 \, \text{d}t \\
-\mathbb{P}(X(t+dt) = x; Y(t+dt)=y-1 | X(t)=x; Y(t)=y) &=& \gamma \, y \, \text{d}t = q_3 \, \text{d}t
+\mathbb{P}(X(t+dt) = x+1; Y(t+dt)=y | X(t)=x; Y(t)=y) &=& \alpha  x \, \text{d}t = q_1 \, \text{d}t \\
+\mathbb{P}(X(t+dt) = x-1; Y(t+dt)=y+1 | X(t)=x; Y(t)=y) &=& \beta x y \, \text{d}t = q_2 \, \text{d}t \\
+\mathbb{P}(X(t+dt) = x; Y(t+dt)=y-1 | X(t)=x; Y(t)=y) &=& \gamma y \, \text{d}t = q_3 \, \text{d}t
 \end{array}
 \right. $$
 
 Now that we have our model described, we would like to simulate it. The Gillespie algorithm is designed to deal with problems like ours, so that's what we will use. Before we do so, in the next paragraph, I'll try to illustrate why and how this algorithm works.
 
-$(X(t), Y(t))$ is a continuous Markov chain with a countable state space I. We can have a closer look to the transition rate matrix of this chain, an object which will help us describe when a the system will change from one state to another. This matrix $Q = (q_{i,j) \in I}$ satisfies:
+$(X(t), Y(t))$ is a continuous Markov chain with a countable state space I. We can have a closer look to the transition rate matrix of this chain, an object which will help us describe when a the system will change from one state to another. This matrix $Q = (q_{i,j \in I})$ satisfies:
 
 - $\forall \; i \neq j, q_{i,j}$ is the speed at which the system changes from state $i$ to state $j$
 - $\forall \; i \in I, q_{i,i} = - \sum_{j \neq i} q_{i,j}$
 
-In our case, from a fixed state $(x, y)$, we can only access three different states: $(x+1, y)$, $(x-1, y+1)$ or $(x, y-1)$ with repectively $q_1, q_2$ and $q_3$ as transition rate. What is nice with this matrix is that a well-known property of continuous time Markov chains states that the holding time in the state $i$ until the next jump, noted $S_{i}$ follows an exponential law of parameter $-q_{i,i} = q_1 + q_2 + q_3$.
+In our case, from a fixed state $(x, y)$, we can only access three different states: $(x+1, y)$, $(x-1, y+1)$ or $(x, y-1)$ with repectively $q_1, q_2$ and $q_3$ as transition rate. What is nice with this matrix is that a well-known property of continuous time Markov chains states that the holding time in state $i$ until the next jump, noted $S_{i}$ follows an exponential law of parameter $-q_{i,i} = q_1 + q_2 + q_3$.
 
 Thanks to that, we thus know when the next jump / change of state will occur, given the state $i$ we are in. We just have to know which event will take place: prey reproduction, predator reproduction or predator death. This is quite easy: event $j$ will occur with probability $\frac{q_{i,j}}{q_1 + q_2 + q_3}$. So for example, the prey reproduction event occur with probability $\frac{q_1}{q_1 + q_2 + q_3}$.
 
