@@ -26,7 +26,7 @@ It is not a parameter, but do not forget to change the path! I put an absolute p
 
 <br/>
 
-You can download the script [here]({{ site.url }}/downloads/arxiv_alert_script.pyarxiv_alert_script.py){:target="_blank"}.
+You can download the script [here]({{ site.url }}/downloads/arxiv_alert_script.py){:target="_blank"}.
 
 
 <br/>
