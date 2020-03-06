@@ -118,8 +118,6 @@ def arxiv_alert(categories=None, keywords=None, authors=None, max_results=20):
     f.write(body)
     f.close()
     
-    #Change the filepath variable below to match the location of your directory
-    #filename = 'file:///Users/username/Desktop/programming-historian/' + filename
     filename = 'file://' + my_path
     try:
         open_new_tab(filename)
