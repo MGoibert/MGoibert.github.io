@@ -22,7 +22,7 @@ The script is based on what Alex Breitweiser did and posted [here](https://acade
 This script outputs a html file with the list of papers, and open it automatically in a new page of your browser.
 There are four different parameters you can tune to personalize your alert: categories (e.g. ["stat.ml, "cs.cv"]) should be a list of all ArXiv research areas you are interested in. Keywords (e.g. ["adversarial", "robustness"]) is also a list and contain keywords you want to find in the title or in the abstract. Authors is again a list in the same format, which allows to search for papers authored by specific researchers. Finally, max_results is a integer number tuning how many papers you want to see at most.
 
-It is not a parameter, but do not forget to change the path! I put an absolute path, not a relative one in my code (sorry!). You just have to change the variable "my_path" (line 116).
+It is not a parameter, but do not forget to change the path! I put an absolute path, not a relative one in my code (sorry!). You just have to change the variable "my_path" (line 120).
 
 <br/>
 

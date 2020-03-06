@@ -113,6 +113,10 @@ def arxiv_alert(categories=None, keywords=None, authors=None, max_results=20):
     body += "</body>"
         
     # Create the HTML file and open it in a new tab
+    
+    # !!!!!!!!!!!!!!!!!!!!!!!!!!!
+    # !!!! CHANGE PATH HERE !!!!!
+    # !!!!!!!!!!!!!!!!!!!!!!!!!!!
     my_path = f'/Users/m.goibert/Documents/Criteo/Arxiv_alert/arxiv_papers.html'
     f = open(my_path,'w')
     f.write(body)
