@@ -42,7 +42,7 @@ crontab -e
 which opens a document where you can lists all the scripts you want to run on a timely basis. In my case, I wanted my code to run every Monday morning at 10 am. The relevant code line is then:
 
 {% highlight r %}
-0 10 * * 1 /The/Relevant/Path/arxiv_alert_script.py
+0 10 * * 1 /Your/python3.7 /The/Relevant/Path/arxiv_alert_script.py
 {% endhighlight %}
 
 You can find a nice explanation on how to use crontab [here](https://www.google.com/search?q=use+crontab+mac&rlz=1C5CHFA_enFR880FR880&oq=use+crontab+mac&aqs=chrome..69i57j0l7.2654j0j7&sourceid=chrome&ie=UTF-8#kpvalbx=_szxiXpb9FZadjLsPr9qL6AE31 "Crontab explanation"){:target="_blank"}.
