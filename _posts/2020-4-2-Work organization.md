@@ -54,6 +54,7 @@ I have several different tools to work with, but the main idea was also to have 
 I was able to do that thanks to this very useful tutorial on how to synchronize Zotero with a Cloud storage [here](https://www.researchgate.net/publication/325828616_Tutorial_The_Best_Reference_Manager_Setup_Zotero_ZotFile_Cloud_Storage "Zotero to Cloud storage tutorial"){:target="_blank"}.
 
 Thus, my workflow feels like this:
+
 1) On my laptop: I find files related to my research areas thanks to the ArXiv alert I created [(see here)](https://mgoibert.github.io/ArXiv-Alert/ "ArXiv Alert post"){:target="_blank"}.
 
 2) On my laptop: I open the pdf and save if to my Zotero library thanks to the Zotero Connector add-on.
