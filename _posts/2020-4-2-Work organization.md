@@ -32,6 +32,7 @@ To take notes on pdf papers (as well as notes related to papers but for which I 
 In addition to that, there are a lot of gestures that are really nice to have, like being able to select part of the pdf (like an image), copy-pasting it to the notebook note, and having a hyperef link automatically added to find the reference.
 Flexcil can also import and export from a variety of cloud services, and I use Google Drive, so it's working fine with it.
 
+<img src={{ site.baseurl }}/images/screenshot1.png alt="Screenshot Flexcil 1" style="width: 50px;"/>
 ![Screenshot Flexcil 1]({{ site.baseurl }}/images/screenshot1.png) ![Screenshot Flexcil 2]({{ site.baseurl }}/images/screenshot2.png)
 
 <br/>
