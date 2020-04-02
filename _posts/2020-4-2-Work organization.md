@@ -34,6 +34,7 @@ Flexcil can also import and export from a variety of cloud services, and I use G
 
 <br/>
 
+![Screenshot Flexcil 1]({{ site.baseurl }}/images/screenshot1.png){: .align-left} ![Screenshot Flexcil 2]({{ site.baseurl }}/images/screenshot2.png){: .align-left}
 
 <div class="clearfix_custom">
   <div class="img-container_custom">

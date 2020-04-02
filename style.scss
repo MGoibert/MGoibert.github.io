@@ -31,18 +31,6 @@ body {
   width: 100%;
 }
 
-.img-container_custom {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
-
-.clearfix_custom::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $montserrat;
   color: $darkerGray;
