@@ -36,10 +36,10 @@ Flexcil can also import and export from a variety of cloud services, and I use G
 
 <div class="row">
   <div class="column">
-    <img src="{{ site.baseurl }}/images/screenshot1.png" alt="Screenshot Flexcil 1" style="width:100%;"/>
+    <img src="{{ site.baseurl }}/images/screenshot1.png" alt="Screenshot Flexcil 1" style="width:45%;"/>
   </div>
   <div class="column">
-    <img src="{{ site.baseurl }}/images/screenshot2.png" alt="Screenshot Flexcil 2" style="width:100%;"/>
+    <img src="{{ site.baseurl }}/images/screenshot2.png" alt="Screenshot Flexcil 2" style="width:45%;"/>
   </div>
 </div>
 
