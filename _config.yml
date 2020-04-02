@@ -80,6 +80,7 @@ gems:
   - jekyll-target-blank # Open links in a new tab
   - jekyll-seo-tag
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-image-size
 
 # Exclude these files from your production _site
 exclude:
