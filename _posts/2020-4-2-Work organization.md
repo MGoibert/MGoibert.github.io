@@ -34,7 +34,7 @@ Flexcil can also import and export from a variety of cloud services, and I use G
 
 <br/>
 
-![Screenshot Flexcil 1]({{ site.baseurl }}/images/screenshot1.png ){: height="500px" width="auto"} ![Screenshot Flexcil 2]({{ site.baseurl }}/images/screenshot2.png ){: height="500px" width="auto"}
+![Screenshot Flexcil 1]({{ site.baseurl }}/images/screenshot1.png ){: height="250px" width="auto"} ![Screenshot Flexcil 2]({{ site.baseurl }}/images/screenshot2.png ){: height="250px" width="auto"}
 
 <br/>
 
