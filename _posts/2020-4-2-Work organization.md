@@ -34,26 +34,12 @@ Flexcil can also import and export from a variety of cloud services, and I use G
 
 <br/>
 
-.img-container {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-<div class="clearfix">
-  <div class="img-container">
+<div class="clearfix_custom">
+  <div class="img-container_custom">
   <img src="{{ site.baseurl }}/images/screenshot1.png" alt="Screenshot Flexcil 1" style="width:100%;"/>
   </div>
-  <div class="img-container">
-  <img src="{{ site.baseurl }}/images/screenshot2.png" alt="Screenshot Flexcil 2" style="width:100%;"/>
-  </div>
-  <div class="img-container">
+  <div class="img-container_custom">
   <img src="{{ site.baseurl }}/images/screenshot2.png" alt="Screenshot Flexcil 2" style="width:100%;"/>
   </div>
 </div>
