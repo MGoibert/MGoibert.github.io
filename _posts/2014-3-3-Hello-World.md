@@ -29,5 +29,5 @@ x = ('a', 1, False)
 A second test with a video
 
 <figure class="video_container">
-  <iframe src="../downloads/Long_test_video.MP4" frameborder="0" width="725" height="500"> </iframe>
+  <iframe src="../downloads/test_video.mp4" frameborder="0" width="725" height="500"> </iframe>
 </figure>
