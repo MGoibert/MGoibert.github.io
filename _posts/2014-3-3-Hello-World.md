@@ -25,3 +25,9 @@ x = ('a', 1, False)
 <figure class="video_container">
   <iframe src="../downloads/graph_test1.html" frameborder="0" width="725" height="500"> </iframe>
 </figure>
+
+A second test with a video
+
+<figure class="video_container">
+  <iframe src="../downloads/test_video.mp4" frameborder="0" width="725" height="500"> </iframe>
+</figure>
