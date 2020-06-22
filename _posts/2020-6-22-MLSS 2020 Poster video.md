@@ -20,6 +20,6 @@ As part of the MLSS 2020 virtual organization, I recorded a "poster video" about
 Download test.
 You can download the script [here]({{ site.url }}/downloads/CV_fr_page.pdf){:target="_blank"}.
 
-Or like that maybe ? [[_config.yml]({{ site.baseurl }}/images/config.png)]({{ site.url }}/downloads/CV_fr_page.pdf){:target="_blank"}
+Or like that maybe ? [_config.yml]({{ site.baseurl }}/images/config.png)({{ site.url }}/downloads/CV_fr_page.pdf){:target="_blank"}
 
 
