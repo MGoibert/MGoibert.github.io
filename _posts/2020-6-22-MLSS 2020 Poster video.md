@@ -1,7 +1,6 @@
 ---
 layout: post
 title: MLSS 2020 Poster Video
-published: false
 ---
 
 Published false.
