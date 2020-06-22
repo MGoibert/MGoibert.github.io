@@ -1,9 +1,10 @@
 ---
 layout: post
 title: MLSS 2020 Poster Video
-hidden: true
+published: false
 ---
 
+Published false.
 As part of the MLSS 2020 virtual organization, I recorded a "poster video" about a paper we - with Thomas Ricatte and Elvis Dohmatob from Criteo AI Lab - recently submitted to NeurIPS 2020.
 
 <br/>
