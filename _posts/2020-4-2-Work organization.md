@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working Organization for PhD Student
+title: Work Organization for PhD Student
 ---
 
 Like many other PhD student before, I have been facing some challenging issues regarding organization of my work since the beginning of my PhD. I have asked advice from collegues or other PhD students, and researched on the internet any tip that could be useful.
