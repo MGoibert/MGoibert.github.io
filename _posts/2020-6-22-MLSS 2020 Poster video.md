@@ -13,6 +13,15 @@ As part of the MLSS 2020 virtual organization, I recorded a "poster video" about
   <iframe src="../downloads/test_video.mp4" frameborder="0" width="725" height="500"> </iframe>
 </figure>
 
+And there
+
+<figure class="video_container">
+	<video width="725" height="500" controls>
+    	<source src="../downloads/test_video.mp4" type="video/mp4">
+	</video>
+</figure>
+
+
 <br/>
 
 # Download the poster
