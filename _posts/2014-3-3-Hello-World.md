@@ -1,7 +1,7 @@
 ---
 layout: post
 title: You're up and running!
-published: false
+hidden: true
 ---
 
 An update to see how it's working. Date changed
