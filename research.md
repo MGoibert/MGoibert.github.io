@@ -18,4 +18,4 @@ I previously worked on two related domains:
 
 ### Publications
 
-Coming soon.
+You can check my [Google Scholar](https://scholar.google.fr/citations?user=2gyHK_MAAAAJ&hl=fr&authuser=1 "My Google Scholar Homepage"){:target="_blank"} page.
