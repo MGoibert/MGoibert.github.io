@@ -1,28 +1,19 @@
 ---
 layout: post
 title: MLSS 2020 Poster Video
-published: false
 ---
 
-Published false.
 As part of the MLSS 2020 virtual organization, I recorded a "poster video" about a paper we - with Thomas Ricatte and Elvis Dohmatob from Criteo AI Lab - recently submitted to NeurIPS 2020.
 
 <br/>
 
 # Poster video
 
-Work in progress
-
-
-<figure class="video_container">
-  <iframe src="../downloads/test_video.mp4" frameborder="0" width="725" height="500"> </iframe>
-</figure>
-
-And there
+Here is the recorded video presenting the paper.
 
 <figure class="video_container">
 	<video width="725" height="500" controls>
-    	<source src="../downloads/test_video.mp4" type="video/mp4">
+    	<source src="../downloads/Poster_video_Goibert.mp4" type="video/mp4">
 	</video>
 </figure>
 
@@ -32,13 +23,9 @@ And there
 
 # Download the poster
 
-Work in progress
+The poster used for this presentation is here:
+[_config.yml]({{ site.baseurl }}/images/config.png)
 
-
-Download test.
-You can download the script [here]({{ site.url }}/downloads/CV_fr_page.pdf){:target="_blank"}.
-
-Or like that maybe ? [_config.yml]({{ site.baseurl }}/images/config.png)({{ site.url }}/downloads/CV_fr_page.pdf){:target="_blank"}
-
+You can also [download it]({{ site.url }}/downloads/Poster_MLSS.pdf){:target="_blank"}.
 
 
