@@ -23,6 +23,6 @@ Here is the recorded video presenting the paper.
 
 # Download the poster
 
-If you are interested, you can [download the poster here.]({{ site.url }}/downloads/Poster_MLSS.pdf){:target="_blank"}.
+If you are interested, you can [download the poster here]({{ site.url }}/downloads/Poster_MLSS.pdf){:target="_blank"}.
 
 
