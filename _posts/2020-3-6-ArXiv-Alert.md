@@ -51,7 +51,7 @@ You can find a nice explanation on how to use crontab [here](https://www.google.
 The final HTML file looks like this:
 
 <div class="resized_img">
-  <img width="500" height="500" src="{{ site.baseurl }}/images/arxiv_alert.png">
+  <img width="725" height="725" src="{{ site.baseurl }}/images/arxiv_alert.png">
 </div>
 
 And that's it! The whole thing is quite easy to do, and you obtain a nice ArXiv alert based on keywords :)
