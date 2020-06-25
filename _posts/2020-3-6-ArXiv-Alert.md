@@ -51,5 +51,8 @@ You can find a nice explanation on how to use crontab [here](https://www.google.
 The final HTML file looks like this:
 
 ![]({{ site.baseurl }}/images/arxiv_alert.png){:height="1000%" width="1000%"}
+<div class="resized_img">
+  <img width="400" height="400" src="{{ site.baseurl }}/images/arxiv_alert.png">
+</div>
 
 And that's it! The whole thing is quite easy to do, and you obtain a nice ArXiv alert based on keywords :)
