@@ -4,9 +4,8 @@ layout: default
 
 <article class="post">
   <h1>{{ page.title }}</h1>
-
   <p class="meta">
-  	{% include read_time.html content=content %}
+  	<span style="color:blue"> *{% include read_time.html content=content %}*</span>
   </p>
 
   <div class="entry">
