@@ -50,6 +50,6 @@ You can find a nice explanation on how to use crontab [here](https://www.google.
 
 The final HTML file looks like this:
 
-![_config.yml]({{ site.baseurl }}/images/arxiv_alert.png =250x)
+![_config.yml]({{ site.baseurl }}/images/arxiv_alert.png){:height="150%" width="150%"}
 
 And that's it! The whole thing is quite easy to do, and you obtain a nice ArXiv alert based on keywords :)
