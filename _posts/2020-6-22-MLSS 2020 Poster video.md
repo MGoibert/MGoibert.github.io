@@ -23,9 +23,6 @@ Here is the recorded video presenting the paper.
 
 # Download the poster
 
-The poster used for this presentation is here:
-[_config.yml]({{ site.baseurl }}/images/config.png)
-
-You can also [download it]({{ site.url }}/downloads/Poster_MLSS.pdf){:target="_blank"}.
+If you are interested, you can [download the poster here.]({{ site.url }}/downloads/Poster_MLSS.pdf){:target="_blank"}.
 
 
