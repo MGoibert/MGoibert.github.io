@@ -3,14 +3,14 @@ layout: default
 ---
 
 <article class="post">
-  <h1>{{ page.title }} <span style="float:right; font-size:17px; color:#45ABC1">{% include read_time.html content=content %}</span> </h1>
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }} <span style="float:right; color:#45ABC1">{% include read_time.html content=content %}</span> 
+  </div>
+
+  <h1>{{ page.title }}</h1>
 
   <div class="entry">
     {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
   {% include disqus.html %}
