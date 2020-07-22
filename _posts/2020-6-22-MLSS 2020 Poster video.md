@@ -1,9 +1,9 @@
 ---
 layout: post
-title: MLSS 2020 Poster Video
+title: MLSS and DLRL 2020 Poster Video
 ---
 
-As part of the MLSS 2020 virtual organization, I recorded a "poster video" about a paper we - with Thomas Ricatte and Elvis Dohmatob from Criteo AI Lab - recently submitted to NeurIPS 2020.
+As part of the MLSS and DLRL 2020 virtual organization, I recorded a "poster video" about a paper we - with Thomas Ricatte and Elvis Dohmatob from Criteo AI Lab - recently submitted to NeurIPS 2020.
 
 <br/>
 
