@@ -21,7 +21,7 @@ body {
 	background: #F7F7F7;
   font: 18px/1.4 $raleway;
   font-weight: 100;
-  color: $black;
+  color: $darkerGray;
 }
 
 .container {
@@ -33,7 +33,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $montserrat;
-  color: $darkerGray;
+  color: $black;
   font-weight: bold;
 
   line-height: 1.7;
@@ -193,7 +193,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $black;
   cursor: pointer;
   font-family: $montserrat;
   font-weight: 300;
