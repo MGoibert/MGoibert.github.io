@@ -56,7 +56,7 @@ To use launchd, you have to create a .plist file which specify all the required 
 
 This file contains the following lines (you should adapt the text in capital letters), that will make my arxiv alert script execute every monday at 9 am:
 
-```html
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -85,7 +85,7 @@ This file contains the following lines (you should adapt the text in capital let
 </plist>
 ```
 
-Then, all you have to is to load what we have just done so that your scheduled process is taken into account: `launchctl load ~/Library/LaunchAgents/MY_PLIST_FILENAME.plist`.
+Then, all you have to do is to load what we have just done so that your scheduled process is taken into account: `launchctl load ~/Library/LaunchAgents/MY_PLIST_FILENAME.plist`.
 
 <br/>
 
