@@ -33,7 +33,9 @@ You can download the script [here]({{ site.url }}/downloads/arxiv_alert_script.p
 
 # Run you script automatically every week
 
-Next, to run this script automatically every week, I use a nice feature of Mac: crontab. It is very easy, you just have to open your Temrinal, and run the following commands:
+Next, to run this script automatically every week, there are two solutions on Mac.
+
+The first, crontab, one is easier to use, but not recommended, and you can go through permission errors when using it on a recent OS version (Mojave or Catalina). Still, here is how to run your arxiv alert script: you just have to open your Temrinal, and run the following commands:
 
 {% highlight r %}
 crontab -e
@@ -47,6 +49,47 @@ which opens a document where you can lists all the scripts you want to run on a 
 
 You can find a nice explanation on how to use crontab [here](https://www.google.com/search?q=use+crontab+mac&rlz=1C5CHFA_enFR880FR880&oq=use+crontab+mac&aqs=chrome..69i57j0l7.2654j0j7&sourceid=chrome&ie=UTF-8#kpvalbx=_szxiXpb9FZadjLsPr9qL6AE31 "Crontab explanation"){:target="_blank"}.
 
+
+
+The second option is to use launchd (see [here](https://killtheyak.com/schedule-jobs-launchd/ "Launchd explanation"){:target="_blank"} for a nice introduction to launchd), which does more or less the same thing as crontab (there are some slight differences), and is the recommended way to schedule scripts on a Mac.
+To use launchd, you have to create a .plist file which specify all the required information for your script to run. This .plist file should be located in your `~/Library/LaunchAgents/` folder. Mine is called `com.arxiv_alert.daemon.plist`.
+
+This file contains the following lines (you should adapt the text in capital letters), that will make my arxiv alert script execute every monday at 9 am:
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>Label</key>
+        <string>MY_PLIST_FILENAME.plist</string>
+        <key>ProgramArguments</key>
+        <array>
+                <string>/YOUR/PYTHON/PATH</string>
+                <string>arxiv_alert_script.py</string>
+        </array>
+        <key>StartCalendarInterval</key>
+        <dict>
+                <key>Hour</key>
+                <integer>9</integer>
+                <key>Minute</key>
+                <integer>0</integer>
+                <key>Weekday</key>
+                <integer>1</integer>
+        </dict>
+        <key>UserName</key>
+        <string>YOUR USER NAME</string>
+        <key>WorkingDirectory</key>
+        <string>THE/FOLDER/WHERE/IS/LOCATED/THE/ARXIV_ALERT/SCRIPT</string>
+</dict>
+</plist>
+```
+
+Then, all you have to is to load what we have just done so that your scheduled process is taken into account: `launchctl load ~/Library/LaunchAgents/MY_PLIST_FILENAME.plist`.
+
+<br/>
+
+# Rendered output
 
 The final HTML file looks like this:
 
