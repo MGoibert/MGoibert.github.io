@@ -88,7 +88,11 @@ This file contains the following lines (you should adapt the text in capital let
 </plist>
 ```
 
-Then, all you have to do is to load what we have just done so that your scheduled process is taken into account: `launchctl load ~/Library/LaunchAgents/MY_PLIST_FILENAME.plist`.
+Then, all you have to do is to load what we have just done so that your scheduled process is taken into account by running in your Terminal:
+
+{% highlight r %}
+launchctl load ~/Library/LaunchAgents/MY_PLIST_FILENAME.plist
+{% endhighlight %}
 
 <br/>
 
