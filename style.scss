@@ -251,10 +251,16 @@ nav {
   padding-left: 1em;
 }
 
+.posts:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #ddd;
+}
+
 .posts > .post:last-child {
-  padding-top: 4em;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 4em;
+  padding-top: 1em;
+  border-bottom: None;
+  padding-bottom: 3em;
 }
 
 .post {
