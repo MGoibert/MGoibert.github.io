@@ -245,16 +245,16 @@ nav {
 
 .posts > .post {
   background-color: #FFFFFF ;
-  padding-bottom: 5em;
-  padding-top: 5em;
-  padding-right: 5em;
-  padding-left: 5em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
-.posts:after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid #ddd;
+.posts > .post:after {
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-bottom: 2px solid #ddd;
 }
 
 .posts > .post:last-child {
