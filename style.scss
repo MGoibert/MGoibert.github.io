@@ -244,18 +244,19 @@ nav {
 //
 
 .posts > .post {
-  background-color: #FFFFFF ;
+//  background-color: #FFFFFF ;
   padding-bottom: 1em;
   padding-top: 1em;
   padding-right: 1em;
   padding-left: 1em;
-}
-
-.posts > .post:after {
-  content: "";
-  display: block;
   border-bottom: 2px solid #ddd;
 }
+
+//.posts > .post:after {
+//  content: "";
+//  display: block;
+//  border-bottom: 2px solid #ddd;
+//}
 
 .posts > .post:last-child {
   padding-top: 1em;
